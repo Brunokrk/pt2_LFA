@@ -1,0 +1,177 @@
+{
+    "init_state":"A",
+    "final_states": [
+        "F"
+    ],
+    "all_states": [
+        {
+            "state": "A",
+            "transitions":[
+                {
+                    "letter":"1",
+                    "unstack":"?",
+                    "stack_up":"0",
+                    "goes_to": "D"
+                },
+                {
+                    "letter":"0",
+                    "unstack":"?",
+                    "stack_up":"1",
+                    "goes_to":"B"
+                }
+            ]
+        },
+        {
+            "state":"B",
+            "transitions":[
+                {
+                    "letter":"1",
+                    "unstack":"1",
+                    "stack_up":"&",
+                    "goes_to":"C"
+                },
+                {
+                    "letter":"0",
+                    "unstack":"&",
+                    "stack_up":"1",
+                    "goes_to":"B"
+                }
+            ]
+        },
+        {
+            "state": "C",
+            "transitions":[
+                {
+                    "letter":"1",
+                    "unstack":"1",
+                    "stack_up":"&",
+                    "goes_to": "C"
+                },
+                {
+                    "letter":"1",
+                    "unstack":"?",
+                    "stack_up":"0",
+                    "goes_to":"C"
+                },
+                {
+                    "letter":"1",
+                    "unstack":"0",
+                    "stack_up":"00",
+                    "goes_to": "C"
+                },
+                {
+                    "letter":"0",
+                    "unstack":"0",
+                    "stack_up":"&",
+                    "goes_to": "C"
+                },
+                {
+                    "letter":"0",
+                    "unstack":"?",
+                    "stack_up":"1",
+                    "goes_to": "C"
+                },
+                {
+                    "letter":"0",
+                    "unstack":"1",
+                    "stack_up":"11",
+                    "goes_to": "C"
+                },
+                {
+                    "letter":"?",
+                    "unstack":"?",
+                    "stack_up":"&",
+                    "goes_to": "F"
+                }
+            ]
+        },
+        {
+            "state": "D",
+            "transitions":[
+                {
+                    "letter":"1",
+                    "unstack":"&",
+                    "stack_up":"0",
+                    "goes_to": "D"
+                },
+                {
+                    "letter":"0",
+                    "unstack":"0",
+                    "stack_up":"&",
+                    "goes_to":"E"
+                }
+            ]
+        },
+        {
+            "state": "E",
+            "transitions":[
+                {
+                    "letter":"0",
+                    "unstack":"0",
+                    "stack_up":"&",
+                    "goes_to": "E"
+                },
+                {
+                    "letter":"0",
+                    "unstack":"?",
+                    "stack_up":"1",
+                    "goes_to":"E"
+                },
+                {
+                    "letter":"0",
+                    "unstack":"1",
+                    "stack_up":"11",
+                    "goes_to": "E"
+                },
+                {
+                    "letter":"1",
+                    "unstack":"1",
+                    "stack_up":"&",
+                    "goes_to": "E"
+                },
+                {
+                    "letter":"1",
+                    "unstack":"?",
+                    "stack_up":"0",
+                    "goes_to": "E"
+                },
+                {
+                    "letter":"1",
+                    "unstack":"0",
+                    "stack_up":"00",
+                    "goes_to": "E"
+                },
+                {
+                    "letter":"?",
+                    "unstack":"?",
+                    "stack_up":"&",
+                    "goes_to": "F"
+                }
+            ]
+        },
+        {
+            "state":"F",
+            "transitions":[]
+        }
+    ],
+
+    "mostrar_pilha": "True",
+
+    "evolucao_estados": "True",
+
+    "aprovar": [ 
+        "1100",
+        "1010",
+        "011",
+        "0110",
+        "0000011111"
+    ],
+
+    "rejeitar": [
+       "10",
+       "101",
+       "10010",
+       "00",
+       "010100100"
+    ]
+}
